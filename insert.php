@@ -40,9 +40,6 @@ if(isset($_GET['enter'])){
 		$name = trim($_GET['name']);
 		$vozrast = trim($_GET['vozrast']);
 		$id_kletka = trim($_GET['id_kletka']);
-		echo $name;
-		echo $vozrast;
-		echo $id_kletka;
 		$ins = "INSERT INTO kurica (id_kletka, name, vozrast) VALUES 
 				('$id_kletka', '$name', '$vozrast') ";
 		$prov = mysqli_query($dbh, $ins) or die("Ошибка" . mysqli_error($dbh));

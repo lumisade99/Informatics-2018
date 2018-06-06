@@ -45,7 +45,7 @@ if(isset($_GET['enter'])){
 		echo $id_kletka;
 		$ins = "INSERT INTO kurica (id_kletka, name, vozrast) VALUES 
 				('$id_kletka', '$name', '$vozrast') ";
-
+		$prov = mysqli_query($dbh, $ins) or die("Ошибка" . mysqli_error($dbh));
 		echo '<meta http-equiv="refresh" content="0; URL=list.php">';
 	}
 
